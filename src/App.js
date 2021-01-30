@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import HeaderBlock from "./copmponents/HeaderBlock";
+import Layout from "./copmponents/Layout";
+import Footer from "./copmponents/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderBlock title="This is title" descr="This is Description!" />
+      <Layout id="layout_one" title="Title1" descr="Subtitle1" />
+      <Layout id="layout_two" title="Title2" descr="Subtitle2" colorBg={true}/>
+      <Layout id="layout_three" title="Title3" descr="Subtitle3" urlBg={true}/>
+    <Footer/>
+    </>
   );
-}
+};
 
 export default App;
